@@ -1,0 +1,22 @@
+
+<h5 class="card-title">Lista de Noivos</h5>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Noiva</th>
+      <th scope="col">Noivo</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let c of casais | async">
+      <td>{{c.data.mulher}}</td>
+      <td>{{c.data.homem}}</td>
+      <td><button type="button" class="btn btn-default" (click)="edit(c.data, c.key)">Editar</button></td>
+      <td><button type="button" class="btn btn-danger ml-2" (click)="delete(c.key)">Excluir</button></td>
+      <td><button type="button" class="btn  ml-2"  (click)="btnLista(c.key)">Lista</button></td>
+    </tr>
+  </tbody>
+</table>
