@@ -1,24 +1,46 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<h5 class="card-title">Lista dos Presentes</h5>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Categoria</th>
-      <th scope="col">Produto</th>
-      <th scope="col">Preco</th>
-      <th scope="col">Quantidade</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr  *ngFor="let p of listaFiltrada">
-      <td>{{p.categoria}}</td>
-      <td>{{p.nomeProduto}}</td>
-      <td>{{p.precoBase}}</td>
-      <td>{{p.quantidade}}</td>
-      <td><button type="button" class="btn btn-default" (click)="edit(p, p.key)">Editar</button></td>
-      <td><button type="button" class="btn btn-danger ml-2" (click)="delete(p.key)">Excluir</button></td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 my-3">
+            <div class="pull-right">
+                <div class="btn-group">
+                    <button class="btn btn-info" id="list">
+                        List View
+                    </button>
+                    <button class="btn btn-danger" id="grid">
+                        Grid View
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div id="products" class="row view-group">
+      <div class="item col-xs-4 col-lg-4">
+          <div class="thumbnail card">
+              <div class="img-event">
+                  <img class="group list-group-image img-fluid" src="https://emporiodolencol.vteximg.com.br/arquivos/ids/166531-1000-1000/Toalha-Banho-Calera-100-Algodao-Karsten-Rosa.jpg?v=637072774748230000" alt="" />
+              </div>
+              <div class="caption card-body">
+                  <h4 class="group card-title inner list-group-item-heading">
+                      Product title</h4>
+                  <p class="group inner list-group-item-text">
+                      Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                      sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                  <div class="row">
+                      <div class="col-xs-12 col-md-6">
+                          <p class="lead">
+                              $21.000</p>
+                      </div>
+                      <div class="col-xs-12 col-md-6">
+                          <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+                
+</div>
