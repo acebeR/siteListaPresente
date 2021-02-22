@@ -38,7 +38,6 @@ export class PresenteService {
 
   getBuscaNoivo() {
     var lista = this.getAll();
-    console.log(lista);
 
   }
 

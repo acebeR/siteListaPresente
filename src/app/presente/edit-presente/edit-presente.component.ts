@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { AngularFireStorage } from "@angular/fire/storage";
 import { Observable } from "rxjs";
+import { catchError, finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-edit-presente',
@@ -40,31 +41,32 @@ export class EditPresenteComponent implements OnInit {
       }
     })
   }
-  onFileSelected(event) {
-    var n = Date.now();
-    const file = event.target.files[0];
-    const filePath = `RoomsImages/${n}`;
-    const fileRef = this.storage.ref(filePath);
-    const task = this.storage.upload(`RoomsImages/${n}`, file);
-    task
-      .snapshotChanges()
-      .pipe(
-        finalize(() => {
-          this.downloadURL = fileRef.getDownloadURL();
-          this.downloadURL.subscribe(url => {
-            if (url) {
-              this.fb = url;
-            }
-            console.log(this.fb);
-          });
-        })
-      )
+  onFileSelected(event: Event) {
+    if(event !== null){
+      var n = Date.now();
+      const file = event.target!;
+      const filePath = `/${n}`;
+      const fileRef = this.storage.ref(filePath);
+      const task = this.storage.upload(`/${n}`, file);
+      task
+        .snapshotChanges()
+        .pipe(
+          finalize(() => {
+            this.downloadURL = fileRef.getDownloadURL();
+            this.downloadURL.subscribe(url => {
+              if (url) {
+                this.fb = url;
+              }
+            });
+          })
+        )
       .subscribe(url => {
         if (url) {
           console.log(url);
         }
       });
     }
+  }
   
   onSubmit(){
     let params: any = this.retaAcao.snapshot.params;

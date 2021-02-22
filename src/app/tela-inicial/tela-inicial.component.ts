@@ -1,7 +1,8 @@
+import { RouterTestingModule } from '@angular/router/testing';
 import { TelaInicialService } from './tela-inicial.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { Casal } from './shared/casal';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 @Component({
   selector: 'app-tela-inicial',
   templateUrl: './tela-inicial.component.html',
@@ -12,33 +13,41 @@ export class TelaInicialComponent implements OnInit {
   noivo: string = '';
   noiva: string  = '';
   inventory = [];
+  ListaNoivosFiltro = new Array();
 
   constructor(private telaInicialService: TelaInicialService,private router: Router) {
     
   }
 
   ngOnInit(): void {
-    // this.telaInicialService.getAll().forEach( c => { 
-    //   c.forEach( d => {
-    //     var coisa = d;
-    //   this.inventory.push(coisa);
-    // })
-    // });
+
     
   }
 
+  buscaPalavraStr = function(texto: String, palavra : string) {
+    return texto.indexOf(palavra);
+  }
 
   public butaoPesquisar(){
-    // let result = this.inventory.find( ({ homem }) => homem === this.noivo );
-    // if(result != undefined){
-    //   if(result.mulher === this.noiva){
-    //     console.log("chamar a proxima página");
-    //   }
-    // }
+    this.ListaNoivosFiltro = new Array();
+    this.telaInicialService.getAll().forEach( c => { 
+      c.forEach( d  => {
+          var obj = new Casal();
+          obj = d.data as Casal;
+          obj.chave = d.key as string;
+          if(this.buscaPalavraStr(obj.homem , this.noivo) == 0 && this.buscaPalavraStr(obj.mulher , this.noiva) == 0){ 
+            this.ListaNoivosFiltro.push(obj);
+          }
+        })
+      this.router.navigate(['/convidadoCasal'], {queryParams: { "chave":  this.ListaNoivosFiltro[0].chave,
+      "homem":  this.ListaNoivosFiltro[0].homem,
+      "mulher":  this.ListaNoivosFiltro[0].mulher }
+      } ); 
+    });
+     
   }
 
   public btnPgLogin(){
-    console.log('aqui');
-    this.router.navigate(['/login']);
+    this.router.navigate(['/login/']);
   }
 }
