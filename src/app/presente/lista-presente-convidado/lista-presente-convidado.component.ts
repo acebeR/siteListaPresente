@@ -11,11 +11,12 @@ import {ActivatedRoute} from '@angular/router';
   templateUrl: './lista-presente-convidado.html',
   styleUrls: ['./lista-presente-convidado.component.css']
 })
-export class ListPresenteComponent implements OnInit {
-
+export class ListaPresenteConvidado implements OnInit {
+  imagem = "";
   presentes: Observable<any>;
   listaFiltrada: Presente[] = [];
   listaCasal: any[];
+  quantidade = 0;
 
   constructor(private presenteService: PresenteService, 
     private presenteDataService: PresenteDataService,private router: Router,
@@ -40,10 +41,13 @@ export class ListPresenteComponent implements OnInit {
           if(obj.chaveCasal ===  params.id){
             obj.key = d.key || '';
             this.listaFiltrada.push(obj); 
+            
           }
         }
       })
+      console.log(this.listaFiltrada);
     });
+    
   }
 
   delete(key:string){
@@ -56,6 +60,20 @@ export class ListPresenteComponent implements OnInit {
     this.presenteDataService.changePresente(presente, key);
   }
 
+  menosmais(simbulo: String, maioValor: any){
+    var maior = maioValor;
+    var menor = 0;
+    var quantidade = this.quantidade;
 
+    if(quantidade > menor){
+      if(simbulo == '-'){
+        quantidade = quantidade - 1;
+      }
+    }
 
+    if(simbulo == '+' && quantidade < maior){
+      quantidade = quantidade + 1;
+    }
+    this.quantidade = quantidade;
+  }
 }
