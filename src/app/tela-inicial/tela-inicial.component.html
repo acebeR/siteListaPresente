@@ -1,51 +1,30 @@
+<!------ barra ---------->
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ fim barra ---------->
+<!------ barra ---------->
 
-<!------ Include the above in your HEAD tag ---------->
-
-  <div id="wrapper" class="animate">
-    <nav class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
-      <span class="navbar-toggler-icon leftmenutrigger"></span>
-      <a class="navbar-brand" href="#">LOGO</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav animate side-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a [routerLink] = "['/Login']">Login</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ml-md-auto d-md-flex">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a [routerLink] = "['/Login']" >Login</a>
-          </li>
-        </ul>
-      </div>
-      
-    </nav>
-
-
-<!------ Include the above in your HEAD tag ---------->
-
-<!--author:starttemplate-->
-<!--reference site : starttemplate.com-->
+  <nav class="header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Presente</a>
+    
+    <ul class="navbar-nav ml-md-auto d-md-flex">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink] = "['/Login']" style="color : #9a9da0;" >Login
+          <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+ 
+  </nav>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords"
@@ -63,12 +42,12 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-
-<!-- Page Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-offset-5 col-md-4 text-center">
-            <h1 class='text-white'>Lista de Casamento</h1>
+  
+  <!-- Page Content -->
+  <div class="container">
+      <div class="row">
+          <div class="col-md-offset-5 col-md-4 text-center">
+              <h1 class='text-white'>Lista de Casamento</h1>
               <div class="form-login">
                 <br>
                 <h4>Escreva o nome do Casal</h4>
@@ -80,20 +59,20 @@
                 <input type="text" id="noiva" class="form-control input-sm chat-input" placeholder="Noiva" [(ngModel)]="noiva"/>
                 <br><br>
                 <div class="wrapper">
-                        <span class="group-btn">
-                            <button class="btn btn-danger btn-md" (click)="butaoPesquisar()" >Pesquisar <i class="fa fa-sign-in"></i></button>
-                        </span>
+                    <span class="group-btn">
+                        <button class="btn btn-danger btn-md" (click)="butaoPesquisar()" >Pesquisar <i class="fa fa-sign-in"></i></button>
+                    </span>
                 </div>
-            </div>
-        </div>
-    </div>
+              </div>
+          </div>
+      </div>
 
-    <!--footer-->
-    <!-- <div class="footer text-white text-center">
-        <p>© 2020 Unique Login Form. All rights reserved | Design by <a href="https://freecss.tech">Free Css</a></p>
-    </div> -->
-    <!--//footer-->
-</div>
+      <!--footer-->
+      <!-- <div class="footer text-white text-center">
+          <p>© 2020 Unique Login Form. All rights reserved | Design by <a href="https://freecss.tech">Free Css</a></p>
+      </div> -->
+      <!--//footer-->
+  </div>
 </body>
 </html>
 
