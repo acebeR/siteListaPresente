@@ -21,8 +21,7 @@ import { PresenteComponent } from './presente/presente.component';
 import { ListPresenteComponent } from './presente/list-presente/list-presente.component';
 import { EditPresenteComponent } from './presente/edit-presente/edit-presente.component';
 import { EditComponent } from './admin/edit/edit.component';
-
-
+import { ListaPresenteConvidado } from './presente/lista-presente-convidado/lista-presente-convidado.component';
 
 const appRoutes: Routes = [
   { path: 'Login', component: LoginComponent }
@@ -42,6 +41,7 @@ const appRoutes: Routes = [
     ListPresenteComponent,
     EditPresenteComponent,
     EditComponent,
+    ListaPresenteConvidado
   ],
 
   imports: [

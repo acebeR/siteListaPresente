@@ -18,7 +18,6 @@ export class EditComponent implements OnInit {
     this.casalDataService.currentCasal.subscribe(data => {
       this.casal = new Casal();
       if (data.casal && data.key) {
-        console.log(data.casal);
         this.key = data.key;
       }
     })
