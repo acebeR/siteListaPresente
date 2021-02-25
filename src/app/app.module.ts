@@ -22,6 +22,8 @@ import { ListPresenteComponent } from './presente/list-presente/list-presente.co
 import { EditPresenteComponent } from './presente/edit-presente/edit-presente.component';
 import { EditComponent } from './admin/edit/edit.component';
 import { ListaPresenteConvidado } from './presente/lista-presente-convidado/lista-presente-convidado.component';
+import { BarraMenuComponent } from './barra-menu/barra-menu';
+
 
 const appRoutes: Routes = [
   { path: 'Login', component: LoginComponent }
@@ -41,7 +43,8 @@ const appRoutes: Routes = [
     ListPresenteComponent,
     EditPresenteComponent,
     EditComponent,
-    ListaPresenteConvidado
+    ListaPresenteConvidado,
+    BarraMenuComponent,
   ],
 
   imports: [
