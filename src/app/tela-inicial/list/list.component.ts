@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CasalDataService } from '../shared/casal-data.service';
 import { CasalService } from '../shared/casal.service';
+import { Login } from 'src/app/login/login';
 
 
 @Component({
@@ -12,6 +13,7 @@ import { CasalService } from '../shared/casal.service';
 })
 export class ListComponent implements OnInit {
   casais: Observable<any>;
+
   constructor(private casalService: CasalService, private casalDataService: CasalDataService) { 
    this.casais = new Observable<any>();
   }
@@ -27,4 +29,6 @@ export class ListComponent implements OnInit {
   edit(casal: typeof Casal, key: string){
     this.casalDataService.changeCasal(casal,key);
   }
+
+
 }

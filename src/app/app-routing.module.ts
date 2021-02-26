@@ -1,3 +1,4 @@
+import { CadastroPresenteComponent } from './login/cadastro/cadastro';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   
   { path : 'barraMenu', component: BarraMenuComponent},
   { path : 'home', component: TelaInicialComponent},
+  { path : 'cadastro', component: CadastroPresenteComponent},
 ];
 
 @NgModule({

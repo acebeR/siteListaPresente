@@ -14,6 +14,7 @@ export class TelaInicialComponent implements OnInit {
   noiva: string  = '';
   inventory = [];
   ListaNoivosFiltro = new Array();
+  mostrar = true;
 
   constructor(private telaInicialService: TelaInicialService,private router: Router) {
     
@@ -48,6 +49,6 @@ export class TelaInicialComponent implements OnInit {
   }
 
   public btnPgLogin(){
-    this.router.navigate(['/login/']);
+    this.router.navigate(['/login']);
   }
 }
