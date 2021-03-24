@@ -16,17 +16,17 @@ que vai presentea-los sem forçar a compra dos presentes em uma determinada loja
 # Telas do Projeto
 
 <h2> HOME </h2>
-![alt text](https://raw.githubusercontent.com/acebeR/siteListaPresente/master/src/imgs-tela/home.jpg?raw=true)
+![alt text](https://github.com/acebeR/siteListaPresente/blob/master/imgsTelas/home.jpg?raw=true)
 
 <br/><br/>
 
 <h2> LOGIN </h2>
-![alt text](https://github.com/acebeR/siteListaPresente/blob/master/src/imgs-tela/Login.PNG?raw=true)
+![alt text](https://github.com/acebeR/siteListaPresente/blob/master/imgsTelas/Login.jpg?raw=true)
 
 <br/><br/>
 
 <h2> LISTA PRESENTES DO CASAL FILTRADO </h2>
-![alt text](https://github.com/acebeR/siteListaPresente/blob/master/src/imgsTelas/Lista_Presentes.jpg?raw=true)
+![alt text](https://github.com/acebeR/siteListaPresente/blob/master/imgsTelas/Lista_Presentes.jpg?raw=true)
 
 <br/><br/>
 
