@@ -1,4 +1,36 @@
-# PrimeiroProjeto
+# Lista de Presentes de Casamento
+Este projeto tem como objetivo cadastrar listas dfe casais que desejam receber presentes de seus convidados e controlar quem é 
+que vai presentea-los sem forçar a compra dos presentes em uma determinada loja.
+
+# Tecnologias usadas
+
+- Angular 2
+- Typescript
+- Node JS
+- Fire Base ( Banco ) 
+- Bootstrap
+- HTML
+- CSS
+- Javascript
+
+# Telas do Projeto
+
+<h2> HOME </h2>
+![alt text](https://github.com/acebeR/siteListaPresente/blob/master/src/imgs-tela/Inicio.PNG?raw=true)
+
+<br/><br/>
+
+<h2> LOGIN </h2>
+![alt text](https://github.com/acebeR/siteListaPresente/blob/master/src/imgs-tela/Login.PNG?raw=true)
+
+<br/><br/>
+
+<h2> LISTA PRESENTES DO CASAL FILTRADO </h2>
+![alt text](https://github.com/acebeR/siteListaPresente/blob/master/src/imgs-tela/Lista%20de%20Presentes.PNG?raw=true)
+
+<br/><br/>
+
+# Observações de Código
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
 
