@@ -2,7 +2,7 @@
 Este projeto tem como objetivo cadastrar listas dfe casais que desejam receber presentes de seus convidados e controlar quem é 
 que vai presentea-los sem forçar a compra dos presentes em uma determinada loja.
 
-# Tecnologias usadas
+# Tecnologias Usadas
 
 - Angular 2
 - Typescript
