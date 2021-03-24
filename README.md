@@ -16,7 +16,7 @@ que vai presentea-los sem forçar a compra dos presentes em uma determinada loja
 # Telas do Projeto
 
 <h2> HOME </h2>
-![alt text](https://github.com/acebeR/siteListaPresente/blob/master/src/imgs-tela/Inicio.PNG?raw=true)
+![alt text](https://github.com/acebeR/siteListaPresente/blob/master/src/imgs-tela/Inicio.png?raw=true)
 
 <br/><br/>
 
