@@ -26,7 +26,7 @@ que vai presentea-los sem forçar a compra dos presentes em uma determinada loja
 <br/><br/>
 
 <h2> LISTA PRESENTES DO CASAL FILTRADO </h2>
-![alt text](https://github.com/acebeR/siteListaPresente/blob/master/src/imgs-tela/Lista%20de%20Presentes.PNG?raw=true)
+![alt text](https://github.com/acebeR/siteListaPresente/blob/master/src/imgsTelas/Lista_Presentes.jpg?raw=true)
 
 <br/><br/>
 
