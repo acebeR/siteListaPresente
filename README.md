@@ -2,6 +2,9 @@
 Este projeto tem como objetivo cadastrar listas de casais que desejam receber presentes de seus convidados, e controlar quem é 
 que vai presentea-los, sem forçar a compra dos presentes em uma determinada loja.
 
+# Entre no Link a-baixo para testar 
+https://casamento-a0863.firebaseapp.com/
+
 # Tecnologias Usadas
 
 - Angular 2
