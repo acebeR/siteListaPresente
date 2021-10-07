@@ -1,11 +1,21 @@
 import Site from './Site.js';
+import FirebaseService from './services/FirebaseService.js';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <Site />
-    </div>
-  );
+
+class App extends React.Component {
+
+	componentDidMount() {
+			new FirebaseService().getUtilidades()
+	}
+
+	render() {
+		return (
+			<div className="App">
+				<Site />
+			</div>
+		);
+	}
 }
 
 export default App;
