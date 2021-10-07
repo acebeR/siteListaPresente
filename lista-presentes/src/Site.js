@@ -12,8 +12,8 @@ const Site = props=> {
             <nav id='navbar' className='navbar nav-menu'>
                 <ul>
                 <li><a href='#hero' className='nav-link scrollto active'><i className='bx bx-home'></i> <span>Home</span></a></li>
-                <li><a href='#about' className='nav-link scrollto'><i className='bx bx-user'></i> <span>About</span></a></li>
-                <li><a href='#resume' className='nav-link scrollto'><i className='bx bx-file-blank'></i> <span>Resume</span></a></li>
+                <li><a href='#login' className='nav-link scrollto'><i className='bx bx-user'></i> <span>Login</span></a></li>
+                <li><a href='#casal' className='nav-link scrollto'><i className='bx bx-search'></i> <span>Casal</span></a></li>
                 <li><a href='#portfolio' className='nav-link scrollto'><i className='bx bx-book-content'></i> <span>Portfolio</span></a></li>
                 <li><a href='#services' className='nav-link scrollto'><i className='bx bx-server'></i> <span>Services</span></a></li>
                 <li><a href='#contact' className='nav-link scrollto'><i className='bx bx-envelope'></i> <span>Contact</span></a></li>
@@ -40,49 +40,36 @@ const Site = props=> {
             <main id='main'>
 
             {/* ======= About Section ======= */}
-            <section id='about' className='about'>
-                <div className='container' data-aos='fade-up'>
+            <section id='login' className='login'>
+                <div className='container'>
 
                     <div className='section-title'>
-                        <h2>About</h2>
-                        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                        <h2>Login</h2>
+                        <p>Cadastre-se para fazer para poder construir sua lista de presentes!</p>
                     </div>
-
-                    <div className='row'>
-                        <div className='col-lg-4'>
-                        <img src='assets/img/hero.png' className='img-fluid' alt=''/>
-                        </div>
-                        <div className='col-lg-8 pt-4 pt-lg-0 content'>
-                        <h3>UI/UX Designer &amp; Web Developer.</h3>
-                        <p className='fst-italic'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua.
-                        </p>
-                        <div className='row'>
-                            <div className='col-lg-6'>
-                            <ul>
-                                <li><i className='bi bi-chevron-right'></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
-                                <li><i className='bi bi-chevron-right'></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                                <li><i className='bi bi-chevron-right'></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                                <li><i className='bi bi-chevron-right'></i> <strong>City:</strong> <span>New York, USA</span></li>
-                            </ul>
-                            </div>
-                            <div className='col-lg-6'>
-                            <ul>
-                                <li><i className='bi bi-chevron-right'></i> <strong>Age:</strong> <span>30</span></li>
-                                <li><i className='bi bi-chevron-right'></i> <strong>Degree:</strong> <span>Master</span></li>
-                                <li><i className='bi bi-chevron-right'></i> <strong>PhEmailone:</strong> <span>email@example.com</span></li>
-                                <li><i className='bi bi-chevron-right'></i> <strong>Freelance:</strong> <span>Available</span></li>
-                            </ul>
+                    <div class="row d-flex flex-row justify-content-center mt-5">
+                        <div class="col-lg-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form method="POST" action="">
+                                    <div class="form-group">
+                                        <input type="text" name="username" class="form-control" placeholder="username"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="password" class="form-control" placeholder="password"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-lg btn-block">
+                                            login
+                                        </button>
+                                    </div>
+                                    <a href=""> Perdi minha Senha</a><br/>
+                                    <a href=""> Não tenho cadastro</a>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                        <p>
-                            Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-                            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-                        </p>
-                        </div>
                     </div>
-
                 </div>
             </section>{/* End About Section */}
 
@@ -201,68 +188,34 @@ const Site = props=> {
             </section>{/* End Skills Section */}
 
             {/* ======= Resume Section ======= */}
-            <section id='resume' className='resume'>
-                <div className='container' data-aos='fade-up'>
+            <section id='casal' className='casal'>
+            <div className='container'>
 
-                <div className='section-title'>
-                    <h2>Resume</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <div className='section-title'>
+                <h2>Casal de Noivos</h2>
+                <p>Pesquise pelo nome do noivo e da noiva para que, você convidado, presenteie os noivos!</p>
                 </div>
-
-                <div className='row'>
-                    <div className='col-lg-6'>
-                    <h3 className='resume-title'>Sumary</h3>
-                    <div className='resume-item pb-0'>
-                        <h4>Brandon Johnson</h4>
-                        <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-                        <ul>
-                        <li>Portland par 127,Orlando, FL</li>
-                        <li>(123) 456-7891</li>
-                        <li>alice.barkley@example.com</li>
-                        </ul>
+                    <div class="row d-flex flex-row justify-content-center mt-5">
+                        <div class="col-lg-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form method="POST" action="">
+                                    <div class="form-group">
+                                        <input type="text" name="noiva" class="form-control" placeholder="Noiva"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="noivo" class="form-control" placeholder="Noivo"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-lg btn-block">
+                                            Pesquisar
+                                        </button>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <h3 className='resume-title'>Education</h3>
-                    <div className='resume-item'>
-                        <h4>Master of Fine Arts &amp; Graphic Design</h4>
-                        <h5>2015 - 2016</h5>
-                        <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-                        <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-                    </div>
-                    <div className='resume-item'>
-                        <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-                        <h5>2010 - 2014</h5>
-                        <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-                        <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-                    </div>
-                    </div>
-                    <div className='col-lg-6'>
-                    <h3 className='resume-title'>Professional Experience</h3>
-                    <div className='resume-item'>
-                        <h4>Senior graphic design specialist</h4>
-                        <h5>2019 - Present</h5>
-                        <p><em>Experion, New York, NY </em></p>
-                        <ul>
-                        <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                        <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                        <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                        <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-                        </ul>
-                    </div>
-                    <div className='resume-item'>
-                        <h4>Graphic design specialist</h4>
-                        <h5>2017 - 2018</h5>
-                        <p><em>Stepping Stone Advertising, New York, NY</em></p>
-                        <ul>
-                        <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                        <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                        <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                        <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-                        </ul>
-                    </div>
-                    </div>
-                </div>
-
                 </div>
             </section>{/* End Resume Section */}
 

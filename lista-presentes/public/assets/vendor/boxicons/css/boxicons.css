@@ -3763,7 +3763,7 @@
   .bx-file:before {
     content: "\ed38";
   }
-  .bx-file-blank:before {
+  .bx-search:before {
     content: "\ed39";
   }
   .bx-file-find:before {
