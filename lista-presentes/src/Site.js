@@ -1,7 +1,11 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+import {Route, Redirect} from 'react-router-dom'
+import Cadastro from './cadastro/Cadastro'
 
 const Site = props=> {
   return (
+      
         <div>
             {/* ======= Mobile nav toggle button ======= */}
             {/* <button type='button' className='mobile-nav-toggle d-xl-none'><i className='bi bi-list mobile-nav-toggle'></i></button> */}
@@ -11,12 +15,12 @@ const Site = props=> {
 
             <nav id='navbar' className='navbar nav-menu'>
                 <ul>
-                <li><a href='#hero' className='nav-link scrollto active'><i className='bx bx-home'></i> <span>Home</span></a></li>
-                <li><a href='#login' className='nav-link scrollto'><i className='bx bx-user'></i> <span>Login</span></a></li>
-                <li><a href='#casal' className='nav-link scrollto'><i className='bx bx-search'></i> <span>Casal</span></a></li>
-                <li><a href='#portfolio' className='nav-link scrollto'><i className='bx bx-book-content'></i> <span>Portfolio</span></a></li>
-                <li><a href='#services' className='nav-link scrollto'><i className='bx bx-server'></i> <span>Services</span></a></li>
-                <li><a href='#contact' className='nav-link scrollto'><i className='bx bx-envelope'></i> <span>Contact</span></a></li>
+                    <li><a href='#hero' className='nav-link scrollto active'><i className='bx bx-home'></i> <span>Home</span></a></li>
+                    <li><a href='#login' className='nav-link scrollto'><i className='bx bx-user'></i> <span>Login</span></a></li>
+                    <li><a href='#casal' className='nav-link scrollto'><i className='bx bx-search'></i> <span>Casal</span></a></li>
+                    <li><a href='#portfolio' className='nav-link scrollto'><i className='bx bx-book-content'></i> <span>Portfolio</span></a></li>
+                    <li><a href='#services' className='nav-link scrollto'><i className='bx bx-server'></i> <span>Services</span></a></li>
+                    <li><a href='#contact' className='nav-link scrollto'><i className='bx bx-envelope'></i> <span>Contact</span></a></li>
                 </ul>
             </nav>{/* .nav-menu */}
 
@@ -28,11 +32,11 @@ const Site = props=> {
                     <h1 Style='color: white;'>Monte sua Lista de Casamento</h1>
                     <p Style='color: white;'>Cadastre-se e monte uma lista!<span className='typed' data-typed-items='Designer, Developer, Freelancer, Photographer'></span></p>
                     <div className='social-links'>
-                    <a Style='color: white;' href='#' className='twitter'><i className='bx bxl-twitter'></i></a>
-                    <a Style='color: white;' href='#' className='facebook'><i className='bx bxl-facebook'></i></a>
-                    <a Style='color: white;' href='#' className='instagram'><i className='bx bxl-instagram'></i></a>
-                    <a Style='color: white;' href='#' className='google-plus'><i className='bx bxl-skype'></i></a>
-                    <a Style='color: white;' href='#' className='linkedin'><i className='bx bxl-linkedin'></i></a>
+                        <a Style='color: white;' href='#' className='twitter'><i className='bx bxl-twitter'></i></a>
+                        <a Style='color: white;' href='#' className='facebook'><i className='bx bxl-facebook'></i></a>
+                        <a Style='color: white;' href='#' className='instagram'><i className='bx bxl-instagram'></i></a>
+                        <a Style='color: white;' href='#' className='google-plus'><i className='bx bxl-skype'></i></a>
+                        <a Style='color: white;' href='#' className='linkedin'><i className='bx bxl-linkedin'></i></a>
                     </div>
                 </div>
             </section>{/* End Hero */}
@@ -64,13 +68,16 @@ const Site = props=> {
                                         </button>
                                     </div>
                                     <a href=""> Perdi minha Senha</a><br/>
-                                    <a href=""> Não tenho cadastro</a>
+                                    <Link to="/cadastro">Não tenho cadastro</Link>
+                                    
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <Route path = {`/cadastro`} component={Cadastro}/>
             </section>{/* End About Section */}
 
             {/* ======= Facts Section ======= */}

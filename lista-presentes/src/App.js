@@ -1,11 +1,19 @@
-import Site from './Site.js';
+import React, { Component } from 'react';
+import {BrowserRouter} from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <Site />
-    </div>
-  );
+
+import Site from './Site'
+
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+            <Site/>
+        </div>
+      </BrowserRouter> 
+    );
+  }
 }
 
 export default App;
