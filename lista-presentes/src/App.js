@@ -1,21 +1,29 @@
-import Site from './Site.js';
+import React, { Component } from 'react';
 import FirebaseService from './services/FirebaseService.js';
-import React from 'react';
+import {BrowserRouter} from 'react-router-dom'
+import Login from './login/Login';
+import Site from './Site'
+import PesquisaCasal from './pesquisa/PesquisaCasal'
+import Footer from './footer/Footer'
 
-
-class App extends React.Component {
-
-	componentDidMount() {
+class App extends Component {
+  
+  componentDidMount() {
 			new FirebaseService().getUtilidades()
 	}
-
-	render() {
-		return (
-			<div className="App">
-				<Site />
-			</div>
-		);
-	}
+  
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+            <Site/>
+            <Login/>
+            <PesquisaCasal/>
+            <Footer/>
+        </div>
+      </BrowserRouter> 
+    );
+  }
 }
 
 export default App;
