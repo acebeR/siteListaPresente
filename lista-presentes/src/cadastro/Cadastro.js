@@ -6,7 +6,7 @@ class Cadastro extends Component {
         super(props)
 
         this.state = {
-            portfolio:{
+            cadastro:{
 
             }
         }
