@@ -31,13 +31,6 @@ const Site = props=> {
                 <div className='container'>
                     <h1 Style='color: white;'>Monte sua Lista de Casamento</h1>
                     <p Style='color: white;'>Cadastre-se e monte uma lista!<span className='typed' data-typed-items='Designer, Developer, Freelancer, Photographer'></span></p>
-                    <div className='social-links'>
-                        <a Style='color: white;' href='#' className='twitter'><i className='bx bxl-twitter'></i></a>
-                        <a Style='color: white;' href='#' className='facebook'><i className='bx bxl-facebook'></i></a>
-                        <a Style='color: white;' href='#' className='instagram'><i className='bx bxl-instagram'></i></a>
-                        <a Style='color: white;' href='#' className='google-plus'><i className='bx bxl-skype'></i></a>
-                        <a Style='color: white;' href='#' className='linkedin'><i className='bx bxl-linkedin'></i></a>
-                    </div>
                 </div>
             </section>{/* End Hero */}
 
@@ -76,9 +69,10 @@ const Site = props=> {
                         </div>
                     </div>
                 </div>
+                <Route path = {`/cadastro`} component={Cadastro}/>
             </section>{/* End About Section */}
-            
-            <Route path = {`/cadastro`} component={Cadastro}/>
+
+           
 
             {/* ======= Facts Section ======= */}
             <section id='facts' className='facts'>
