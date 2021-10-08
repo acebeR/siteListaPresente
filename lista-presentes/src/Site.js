@@ -76,9 +76,9 @@ const Site = props=> {
                         </div>
                     </div>
                 </div>
-
-                <Route path = {`/cadastro`} component={Cadastro}/>
             </section>{/* End About Section */}
+            
+            <Route path = {`/cadastro`} component={Cadastro}/>
 
             {/* ======= Facts Section ======= */}
             <section id='facts' className='facts'>

@@ -23,53 +23,44 @@ class Cadastro extends Component {
 
     render (){
       return (
-            <div>
+            <div className='container'>
                 <form className="form-horizontal">
                 <fieldset>
                 <div className="panel panel-primary">
-                    <div className="panel-heading">Cadastro de Cliente</div>
-                    
+                    <div className="panel-heading">Cadastro do Casal</div>
                     <div className="panel-body">
-                <div className="form-group">
+                    <div className="form-group">
+                        <div className="col-md-11 control-label">
+                                <p className="help-block"><h11>*</h11> Campo Obrigatório </p>
+                        </div>
+                    </div>
 
-                <div className="col-md-11 control-label">
-                        <p className="help-block"><h11>*</h11> Campo Obrigatório </p>
+                {/* Esposo*/}
+                <div className="form-group">
+                    <label className="col-md-2 control-label" for="Nome">Nome Esposo<h11>*</h11></label>  
+                    <div className="col-md-8">
+                        <input id="Nome" name="Nome" placeholder="" className="form-control input-md" required="" type="text"/>
+                    </div>
                 </div>
+
+                {/* Esposa*/}
+                <div className="form-group">
+                    <label className="col-md-2 control-label" for="Nome">Nome Esposa<h11>*</h11></label>  
+                    <div className="col-md-8">
+                        <input id="Nome" name="Nome" placeholder="" className="form-control input-md" required="" type="text"/>
+                    </div>
                 </div>
 
                 {/* Text input*/}
                 <div className="form-group">
-                <label className="col-md-2 control-label" for="Nome">Nome <h11>*</h11></label>  
-                <div className="col-md-8">
-                <input id="Nome" name="Nome" placeholder="" className="form-control input-md" required="" type="text"/>
-                </div>
-                </div>
-
-                {/* Text input*/}
-                <div className="form-group">
-                <label className="col-md-2 control-label" for="Nome">CPF <h11>*</h11></label>  
-                <div className="col-md-2">
-                <input id="cpf" name="cpf" placeholder="Apenas números" className="form-control input-md" required="" type="text" maxlength="11" pattern="[0-9]+$"/>
-                </div>
-                
-                <label className="col-md-1 control-label" for="Nome">Nascimento<h11>*</h11></label>  
-                <div className="col-md-2">
-                <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" className="form-control input-md" required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()"/>
-                </div>
-
-                {/* Multiple Radios (inline) */}
-
-                <label className="col-md-1 control-label" for="radios">Sexo <h11>*</h11></label>
-                <div className="col-md-4"> 
-                    <label required="" className="radio-inline" for="radios-0" >
-                    <input name="sexo" id="sexo" value="feminino" type="radio" required/>
-                    Feminino
-                    </label> 
-                    <label className="radio-inline" for="radios-1">
-                    <input name="sexo" id="sexo" value="masculino" type="radio"/>
-                    Masculino
-                    </label>
-                </div>
+                    <label className="col-md-3 control-label" for="Nome">CPF (apena um)<h11>*</h11></label>  
+                    <div className="col-md-2">
+                        <input id="cpf" name="cpf" placeholder="Apenas números" className="form-control input-md" required="" type="text" maxlength="11" pattern="[0-9]+$"/>
+                    </div>
+                    <label className="col-md-3 control-label" for="Nome">Data do Casamento<h11>*</h11></label>  
+                    <div className="col-md-2">
+                        <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" className="form-control input-md" required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()"/>
+                    </div>
                 </div>
 
                 {/* Prepended text*/}
