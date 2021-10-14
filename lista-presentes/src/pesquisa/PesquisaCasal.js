@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
+import PesquisaService from './PesquisaService.js';
 
 class PesquisaCasal extends Component {
 
     constructor(props){
         super(props)
+        this.state = {noiva: '',noivo:''};
+        this.casais = [];
+        // this.pesquisarCasais = this.pesquisarCasais.bind(this);
+    }
 
-        this.state = {
-            pesquisaCasal:{
+    pesquisarCasais(noiva,noivo){
+        console.log("estoy aqui");
+        console.log(noiva,noivo);
+        // new PesquisaService().getCasais().then(v => {
+        //     this.casais = v;
+        //     this.teste();
+        // });
+        this.casais = new PesquisaService().getCasais();
+        this.teste()
 
-            }
-        }
+    }
 
-        //construtor
-        // config.syncState('cadastro',{
-
-        //     context: this,
-        //     state: 'portfolio',
-        //     asArray: false
-        // })
-            
+    teste(){
+        console.log(this.casais);
     }
 
     render (){
@@ -32,23 +37,23 @@ class PesquisaCasal extends Component {
                 <h2>Casal de Noivos</h2>
                 <p>Pesquise pelo nome do noivo e da noiva para que, você convidado, presenteie os noivos!</p>
                 </div>
-                    <div class="row d-flex flex-row justify-content-center mt-5">
-                        <div class="col-lg-5">
-                            <div class="card">
-                                <div class="card-body">
-                                    <form method="POST" action="">
-                                    <div class="form-group">
-                                        <input type="text" name="noiva" class="form-control" placeholder="Noiva"/>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" name="noivo" class="form-control" placeholder="Noivo"/>
-                                    </div>
-                                    <div class="form-group">
-                                        <button class="btn btn-primary btn-lg btn-block">
-                                            Pesquisar
-                                        </button>
-                                    </div>
-                                    </form>
+                    <div className="row d-flex flex-row justify-content-center mt-5">
+                        <div className="col-lg-5">
+                            <div className="card">
+                                <div className="card-body">
+                                   {/* <form onSubmit={this.pesquisarCasais}> */}
+                                        <div className="form-group">
+                                        <input type="text" name="noiva" className="form-control" value={this.state.noiva} onChange={ e => this.setState({noiva: e.target.value}) } placeholder="Noiva"/>
+                                        </div>
+                                        <div className="form-group">
+                                            <input type="text" name="noivo" className="form-control" value={this.state.noivo} onChange={ e => this.setState({noivo: e.target.value}) } placeholder="Noivo"/>
+                                        </div>
+                                        <div className="form-group">
+                                            <button className="btn btn-primary btn-lg btn-block" onClick={() => this.pesquisarCasais(this.state.noiva,this.state.noivo)}>
+                                                Pesquisar
+                                            </button>
+                                        </div>
+                                    {/* </form> */}
                                 </div>
                             </div>
                         </div>

@@ -8,10 +8,6 @@ import Footer from './footer/Footer'
 
 class App extends Component {
   
-  componentDidMount() {
-			new FirebaseService().getUtilidades()
-	}
-  
   render() {
     return (
       <BrowserRouter>

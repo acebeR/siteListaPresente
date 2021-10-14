@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LoginService from './LoginService.js';
 
 class Login extends Component {
 
@@ -11,15 +12,13 @@ class Login extends Component {
             }
         }
 
-        //construtor
-        // config.syncState('cadastro',{
-
-        //     context: this,
-        //     state: 'portfolio',
-        //     asArray: false
-        // })
-            
     }
+
+    componentDidMount() {
+        new LoginService().getUtilidades()
+    }
+
+    
 
     render (){
       return (
@@ -48,6 +47,7 @@ class Login extends Component {
                                         </button>
                                     </div>
                                     <a href=""> Perdi minha Senha</a><br/>
+                                    <a href=""> Não tenho cadastro</a><br/>
                                     {/* <Link to="/cadastro">Não tenho cadastro</Link> */}
                                     {/* <button type="button" className="btn btn-primary" onClick={() =>this.showCadastro(this.varCadastro)}>Não tenho cadastro</button> */}
                                     </form>
