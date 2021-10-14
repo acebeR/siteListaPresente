@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PesquisaService from './PesquisaService.js';
+import {PesquisaService} from './PesquisaService.js';
 
 class PesquisaCasal extends Component {
 
@@ -7,24 +7,27 @@ class PesquisaCasal extends Component {
         super(props)
         this.state = {noiva: '',noivo:''};
         this.casais = [];
+        this.PesquisaService = new PesquisaService();
         // this.pesquisarCasais = this.pesquisarCasais.bind(this);
     }
 
     pesquisarCasais(noiva,noivo){
         console.log("estoy aqui");
         console.log(noiva,noivo);
-        // new PesquisaService().getCasais().then(v => {
-        //     this.casais = v;
-        //     this.teste();
-        // });
-        this.casais = new PesquisaService().getCasais();
-        this.teste()
+
+        this.PesquisaService.getCasais().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                this.casais.push(doc.data());
+            });
+            console.log("-----------DENTRO-------------");
+            console.log(this.casais);
+        })
+        .catch((error) => {
+            console.log("Error getCasais: ", error);
+        });
 
     }
 
-    teste(){
-        console.log(this.casais);
-    }
 
     render (){
       return (
