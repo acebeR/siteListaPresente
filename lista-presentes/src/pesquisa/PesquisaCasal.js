@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import {PesquisaService} from './PesquisaService.js';
-import ListaCasal from './ListaCasal.js';
+import {Route, Redirect} from 'react-router-dom'
+import ListaCasal from './ListaCasal';
 
 class PesquisaCasal extends Component {
 
     constructor(props){
         super(props)
-        this.state = {noiva: '',noivo:'',casalPesquisa:''};
+        this.state = {noiva: '',noivo:'',casalPesquisa : {id:'',Mulher:'',Homem:''},showLista:false};
         this.casais = [];
-        this.casalPesquisa = [];
         this.PesquisaService = new PesquisaService();
     }
 
@@ -17,8 +17,8 @@ class PesquisaCasal extends Component {
             querySnapshot.forEach((doc) => {
                 var casal = doc.data();
                 if(casal.Mulher === noiva && casal.Homem === noivo){
-                    this.casalPesquisa.push(casal);
                     this.setState({casalPesquisa:{id:casal.id,Mulher:casal.Mulher,Homem:casal.Homem}});
+                    this.setState({showLista:true});
                 }
             });
         })
@@ -77,18 +77,12 @@ class PesquisaCasal extends Component {
                                             Pesquisar
                                         </button>
                                     </div>
-                                    <label value={this.state.casalPesquisa}></label>
-                                    -----{this.state.casalPesquisa}--------
-                                    {console.log(this.state.casalPesquisa)}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {/* {
-                        if(this.state.casalPesquisa){ 
-                            return <ListaCasal/>
-                        }
-                    } */}
+                    {/* {this.state.showLista ? <ListaCasal/> : null} */}
+                    {this.state.showLista ? <Route pathname={`${this.state.casalPesquisa}/listaCasal`} component = {ListaCasal}/> : null}
                     
                 </div>
                     

@@ -4,6 +4,7 @@ class ListaCasal extends Component {
 
     constructor(props){
         super(props)
+        
     }
 
     render (){
