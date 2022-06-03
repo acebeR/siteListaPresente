@@ -8,5 +8,10 @@
 + Banco: Firebase ( nuvem )
 
 
-Primeira Tela
-![alt text]()
+<h5>Primeira Tela</h5>
+![alt text](https://github.com/acebeR/siteListaPresente/blob/master/lista-presentes/imgs/parte%201%20-%20Site%20Lista%20casamento.PNG?raw=true)
+<br>
+<h5>Login Tela</h5>
+![alt text](https://github.com/acebeR/siteListaPresente/blob/master/lista-presentes/imgs/parte%202.PNG?raw=true)
+<h5>Pesquisa por Nomes dos Noivos</h5>
+![alt text](https://github.com/acebeR/siteListaPresente/blob/master/lista-presentes/imgs/parte%203.PNG?raw=true)
