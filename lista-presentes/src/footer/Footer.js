@@ -27,7 +27,7 @@ class Footer extends Component {
             {/* ======= Footer ======= */}
             <footer id='footer'>
                 <div className='container'>
-                    <h3>Brandon Johnson</h3>
+                    <h3>Site Feito por: Rebeca Divina</h3>
                     <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
                     <div className='social-links'>
                     <a href='#' className='twitter'><i className='bx bxl-twitter'></i></a>
