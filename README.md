@@ -9,7 +9,7 @@
 
 
 <h5>Primeira Tela</h5>
-![alt text](https://github.com/acebeR/siteListaPresente/blob/master/lista-presentes/imgs/parte%201%20-%20Site%20Lista%20casamento.PNG?raw=true)
+![alt text](![image](https://user-images.githubusercontent.com/33354360/171924988-e3d68b9a-4173-45a0-83f2-5c63c69a23ac.png))
 <br>
 <h5>Login Tela</h5>
 ![alt text](https://raw.githubusercontent.com/acebeR/siteListaPresente/master/lista-presentes/imgs/parte%202.PNG)
