@@ -10,7 +10,7 @@
 
 <h5>Primeira Tela</h5>
 
-![alt text](https://github.com/acebeR/desafioMirante/blob/master/img/login_admin.jpg?raw=true)
+![alt text](https://github.com/acebeR/siteListaPresente/blob/master/imgs/parte%201%20-%20Site%20Lista%20casamento.PNG?raw=true)
 
 <br>
 <h5>Login Tela</h5>
